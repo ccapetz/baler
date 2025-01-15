@@ -736,7 +736,8 @@ class KAN_AE(nn.Module):
         h1 = self.en1(x)
         h2 = self.en2(h1)
         h3 = self.en3(h2)
-        return self.en4(h3)
+        out = self.en4(h3)
+        return out
 
     def decode(self, z):
         h4 = self.de1(z)
